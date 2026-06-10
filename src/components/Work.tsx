@@ -15,6 +15,7 @@ const projects = [
     category: "Optimization Engine",
     tools: "Python, PostgreSQL, Greedy + Genetic Algorithm",
     link: "https://github.com/nav-in27/timetable-gen",
+    image: "/images/cover_timetable.jpg",
   },
   {
     num: "02",
@@ -22,6 +23,7 @@ const projects = [
     category: "ML Pipeline",
     tools: "Scikit-learn, Pandas, XGBoost, Cross-Validation",
     link: "https://github.com/nav-in27/churn-prediction",
+    image: "/images/cover_churn.jpg",
   },
   {
     num: "03",
@@ -29,6 +31,7 @@ const projects = [
     category: "Statistical Analysis",
     tools: "R, Bayesian Regression, Shiny Dashboard",
     link: "https://github.com/nav-in27/lung-cancer-analysis",
+    image: "/images/cover_lung.jpg",
   },
 ];
 
@@ -105,7 +108,7 @@ const Work = () => {
                 <p>{project.tools}</p>
               </div>
               <WorkImage
-                image="/images/placeholder.webp"
+                image={project.image}
                 alt={project.title}
                 link={project.link}
               />

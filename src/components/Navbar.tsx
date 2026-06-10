@@ -5,7 +5,7 @@ import HoverLinks from "./HoverLinks";
 import { gsap } from "gsap";
 import { ScrollSmoother } from "gsap/ScrollSmoother";
 
-import Logo from "../../public/images/logo.png";
+
 
 import "./styles/Navbar.css";
 
@@ -17,8 +17,8 @@ const Navbar = () => {
     smoother = ScrollSmoother.create({
       wrapper: "#smooth-wrapper",
       content: "#smooth-content",
-      smooth: 1.7,
-      speed: 1.7,
+      smooth: 1,
+      speed: 1,
       effects: true,
       autoResize: true,
       ignoreMobileResize: true,
@@ -46,15 +46,17 @@ const Navbar = () => {
   return (
     <>
       <div className="header">
-        <a href="/#" className="navbar-title" data-cursor="disable">
-          <img
-            src={Logo}
-            alt="Logo"
-            width={50}
-            style={{
-              filter: "invert(100%)",
-            }}
-          />
+        <a href="/#" className="navbar-title" data-cursor="disable" style={{ textDecoration: 'none' }}>
+          <span style={{
+            fontSize: "36px",
+            fontWeight: "800",
+            fontFamily: "Geist, sans-serif",
+            color: "#eae5ec",
+            lineHeight: 1,
+            letterSpacing: "2px"
+          }}>
+            N<span style={{ color: "var(--accentColor)" }}>.</span>
+          </span>
         </a>
 
         <ul>
@@ -71,6 +73,15 @@ const Navbar = () => {
           <li>
             <a data-href="#contact" href="#contact">
               <HoverLinks text="CONTACT" />
+            </a>
+          </li>
+          <li>
+            <a
+              href="/resume/Naveen_R_Resume.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <HoverLinks text="RESUME" />
             </a>
           </li>
         </ul>

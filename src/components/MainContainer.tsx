@@ -5,6 +5,7 @@ import Career from "./Career";
 import Contact from "./Contact";
 import Landing from "./Landing";
 import Navbar from "./Navbar";
+import NexusCard from "./NexusCard";
 import SocialIcons from "./SocialIcons";
 import WhatIDo from "./WhatIDo";
 import Work from "./Work";
@@ -40,6 +41,7 @@ const MainContainer = ({ children }: PropsWithChildren) => {
         <div id="smooth-content">
           <Landing>{!isDesktopView && children}</Landing>
           <About />
+          <NexusCard />
           <WhatIDo />
           <Career />
           <Work />
